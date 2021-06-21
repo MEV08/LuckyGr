@@ -1,0 +1,117 @@
+.promo {
+    height: 100%;
+    min-height: 500px;
+    max-height: 500px;
+    width: 50%;
+    padding: 40px 0 35px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+    background: linear-gradient(180deg, $primary 0%, $secondary 100%);
+    box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+    z-index: 5;
+    overflow: hidden;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 122.86%;
+        max-width: 688px;
+        height: 137.6%;
+        max-height: 688px;
+        left: 41.96%;
+        top: -18.8%;
+        opacity: 0.03;
+        border: 20px solid $white;
+        border-radius: 50%;
+        z-index: -30;
+        @include breakpoint($mobile-bp) {
+            display: none;
+        }
+    }
+    @include breakpoint($tablet-bp) {
+        width: 100%;
+    }
+    @include breakpoint($mobile-bp) {
+         padding: 40px 20px 0;
+         height: auto;
+         min-height: auto;
+         max-height: none;
+         background: transparent;
+         box-shadow: none;
+    }
+}
+.promo-header {
+    @include breakpoint($mobile-bp) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.promo-title {
+    padding-left: 20px;
+    font-size: 18px;
+    line-height: 130%;
+    color: $white;
+    font-weight: 700;
+    &--helper {
+        padding-left: 0;
+        position: absolute;
+        text-transform: uppercase;
+        bottom: 35px;
+        left: 40px;
+        @include breakpoint($mobile-bp) {
+            position: static;
+        }
+    }
+    @include breakpoint($mobile-bp) {
+        padding-left: 0;
+        font-size: 18px;
+        color: $black;
+    }
+}
+.promo-photo {
+    padding: 0 38px 0 37px;
+    position: relative;
+    &__img {
+        display: block;
+        width: 100%;
+        max-width: 465px;
+        height: auto;
+        z-index: 500;
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        width: 73.7%;
+        max-width: 398px;
+        height: 150%;
+        max-height: 398px;
+        bottom: -2px;
+        left: 0;
+        background-color: $primary;
+        z-index: -20;
+        border-radius: 50%;
+
+    }
+    @include breakpoint($mobile-bp) {
+        margin: 57px 21px 32px 36px;
+        padding: 0;
+    }
+    @include breakpoint($mobile-bp) {
+        &:before {
+            width: 90.58%;
+            height: 165.57%;
+            bottom: -32px;
+            left: 3px;
+        }
+    }
+    @include breakpoint($mobile-bp-sm) {
+        &:before {
+            max-height: 202px;
+            max-width: 202px;
+        }
+    }
+}
+
+

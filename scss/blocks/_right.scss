@@ -1,0 +1,187 @@
+.order {
+    height: 100%;
+    width: 50%;
+    @include breakpoint($tablet-bp) {
+        margin-top: 37px;
+        width: 100%;
+    }
+    @include breakpoint($mobile-bp) {
+        padding: 0 20px;
+        background: transparent;
+    }
+}
+.order-title {
+    margin-bottom:52px;
+    padding: 29px 128px 29px 129px;
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 800;
+    color: $black;
+    background-color: $light-grey;
+    text-align: center;
+    border-top-right-radius: 30px;
+    @include breakpoint($tablet-bp) {
+        padding: 0;
+        background-color: $white;
+    }
+    @include breakpoint($mobile-bp) {
+        margin-bottom: 28px;
+    }
+}
+.order-form {
+    margin: 0 122px 0 117px;
+    width: 100%;
+    max-width: 320.18px;
+    @include breakpoint($tablet-bp) {
+        margin: 0 auto 28px;
+    }
+}
+.order-from__block {
+    @include breakpoint($mobile-bp) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.form-label {
+    margin-bottom: 20px;
+    display: block;
+    &__txt {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    &--sm {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.label-name {
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 130%;
+    font-family: inherit;
+    color: $primary;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    &--helper {
+        color: $black;
+    }
+}
+.form-input {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 96px 16px 20px;
+    background-color: $light-grey;
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    &--sm {
+        max-width: 184px;
+        padding-right: 36px;
+        @include breakpoint($mobile-bp) {
+            max-width: 174px;
+        }
+    }
+    &::placeholder {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+        font-family: inherit;
+        color: $black;
+        opacity: 0.2;
+    }
+}
+.form-btn {
+    display: flex;
+    align-items: center;
+    margin-top: 18px; 
+    width: 100%;
+    max-width: 320px;
+    padding: 12px 114.5px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    color: $white;
+    background-color: $primary;
+    border-radius: 5px;
+    border: none;
+    @include breakpoint($mobile-bp) {
+        padding: 12px 94.5px;
+    }
+}
+.arrow {
+    margin-left: 10px;
+}
+.dropdown {
+    margin-left: 20px;    
+    position: relative;
+    max-width: 116.18px;
+    height: 50px;
+    background-color: $light-grey;
+    border: 1px solid #E4E4E4;
+    border-radius: 5px;
+    .open &-menu {
+        display: block;
+    }
+    @include breakpoint($mobile-bp-sm) {
+        margin-left: 10px;
+        max-width: 96px;
+    }
+}
+.dropdown-label {
+    padding: 16px 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;    
+    @include breakpoint($mobile-bp-sm) {
+        padding: 16px 10px;
+    }     
+}
+.dropdown-arrow {
+    display: block;
+    width: 8px;
+    height: 4px;
+}
+.dropdown-menu {
+    position: absolute;
+    display: none;
+    list-style: none;
+    background-color: $light-grey;
+    border: 1px solid #E4E4E4;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    top: 47px;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    &__item {
+        padding: 8px 20px; 
+        color: $black;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 130%;
+        display: flex;
+        justify-content: space-between;
+        &:hover {
+            background-color: darken($light-grey, 10%);
+            cursor: pointer;
+        }
+    }
+}
+.flag {
+    margin: 0 10px;
+}
+.order-footer {
+    width: 100%;
+    padding: 11px 0;
+    display: none;
+    justify-content: center;
+    background-color: $light-grey;
+    &__img {
+        margin: 0 20px;
+    }
+    @include breakpoint($tablet-bp) {
+        display: flex;
+    }
+}
